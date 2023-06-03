@@ -57,8 +57,6 @@ class MainWindow(QMainWindow):
         widget.setLayout(layout)
         self.setCentralWidget(widget)
 
-
-
 app = QApplication(sys.argv)
 window = MainWindow()
 window.show()
