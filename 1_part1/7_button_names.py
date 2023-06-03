@@ -22,7 +22,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("The App")
         self.button = QPushButton("Press")
         self.button.clicked.connect(self.button_clicked)
-#        self.windowTitleChanged.connect(self.window_title_changed)
+        self.windowTitleChanged.connect(self.window_title_changed)
 
         self.setCentralWidget(self.button)
 
@@ -31,6 +31,12 @@ class MainWindow(QMainWindow):
         new_title = choice(window_titles)
         print('title choosed: ',new_title)
         self.setWindowTitle(new_title)
+
+    def window_title_changed(self, window_title):
+        print('title changed for', window_title)
+        if window_title == 'Something went wrong':
+            self.button.setDisabled(True)
+            self.button.setText("NOOOO")
 
 
 app = QApplication(sys.argv)
