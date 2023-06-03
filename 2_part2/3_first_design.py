@@ -54,6 +54,11 @@ class Ui_Form(object):
         mytext = self.lineEdit.text()
         self.label.setText(mytext)
 
+    def button2(self):
+        self.label.setText("Another Text")
+        self.label.setFont(QFont("Times", 15))
+        self.label.setStyleSheet('color:red')
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Qt Designer Application"))
