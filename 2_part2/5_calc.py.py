@@ -108,8 +108,13 @@ class Ui_Form(object):
         self.pushButton.clicked.connect(self.dodanie)
 
         self.pushButton_2.setText(_translate("Form", "-"))
+        self.pushButton_2.clicked.connect(self.odejmowanie)
+
         self.pushButton_3.setText(_translate("Form", "*"))
+        self.pushButton_3.clicked.connect(self.mnozenie)
+
         self.pushButton_4.setText(_translate("Form", "/"))
+        self.pushButton_4.clicked.connect(self.dzielenie)
         self.label.setText(_translate("Form", "Pierwsza liczba"))
         self.label_2.setText(_translate("Form", "Druga liczba"))
 
